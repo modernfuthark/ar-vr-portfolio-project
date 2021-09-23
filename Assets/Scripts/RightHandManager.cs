@@ -12,10 +12,14 @@ public class RightHandManager : MonoBehaviour
 
     public GameObject golfClub;
 
+    public LineRenderer raycastLine;
+
 	void Start()
 	{
         dia = new XRDefaultActions();
         dia.Enable();
+
+        raycastLine.enabled = false;
 
 		var rightHandDevices = new List<UnityEngine.XR.InputDevice>();
 		UnityEngine.XR.InputDevices.GetDevicesAtXRNode(UnityEngine.XR.XRNode.RightHand, rightHandDevices);

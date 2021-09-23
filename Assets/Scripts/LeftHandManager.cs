@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LeftHandManager : MonoBehaviour
 {
 	private XRDefaultActions dia;
 
+	public Text holeNum;
+	public Text parNum;
+
+	public bool paused = false;
+
 	public GameObject GolfBall;
+
 
 	void Start()
 	{
 		bool HasBall = false;
 		dia = new XRDefaultActions();
 		dia.Enable();
+
+		var hn = GameManager.getHoleNumber();
+		holeNum.text = $"Hole {hn}";
+		parNum.text = $"Par: {GameManager.getPar(hn)}";
 
 		dia.XRILeftHand.PrimaryButton.performed += ctx =>
 		{
@@ -31,6 +42,20 @@ public class LeftHandManager : MonoBehaviour
 					GolfBall.gameObject.transform.SetParent(null, true);
 					HasBall = false;
 				}
+			}
+		};
+
+		dia.XRILeftHand.MenuButton.performed += ctx =>
+		{
+			if (!paused)
+			{
+				paused = true;
+
+
+			}
+			else
+			{
+				paused = false;
 			}
 		};
 

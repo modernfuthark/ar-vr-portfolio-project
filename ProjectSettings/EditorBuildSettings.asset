@@ -7,6 +7,18 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
+    guid: ccc3ebd0c1916fa4ab7359b958c02503
+  - enabled: 1
+    path: Assets/Scenes/Hole_1.unity
+    guid: e5b17725a63f28548abaaff219aa5d31
+  - enabled: 1
+    path: Assets/Scenes/Hole_2.unity
+    guid: fc90773b22728a24ea25d94ee1a00c21
+  - enabled: 1
+    path: Assets/Scenes/Hole_3.unity
+    guid: ae4722956cbbc3b47b7b75b179b84504
+  - enabled: 1
+    path: Assets/Scenes/TestScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f9f437d24e593ea4eaf35744d8d69afd, type: 2}
